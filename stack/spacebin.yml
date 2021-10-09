@@ -2,7 +2,7 @@
 services:
   spirit:
     container_name: spirit
-    image: 'spacebinorg/spirit:v0.1.7'
+    image: 'spacebinorg/spirit:v0.1.7a'
     restart: unless-stopped
     ports:
       - 9003:9000

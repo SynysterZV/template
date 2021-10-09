@@ -1,0 +1,15 @@
+---
+services:
+  spirit:
+    container_name: spirit
+    image: 'spacebinorg/spirit:v0.1.6a'
+    restart: unless-stopped
+    volumes:
+      - /portainer/Spacebin/Spirit/opt:/opt/spirit
+  pulsar:
+    container_name: pulsar
+    environment:
+      PULSAR_INSTANCE: ${INSTANCE}
+    image: 'spacebinorg/pulsar:v1.1.3'
+    ports:
+      - 3333:3000

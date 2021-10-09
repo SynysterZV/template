@@ -1,0 +1,205 @@
+{
+	"version": "2",
+	"templates": [
+		{
+			"categories": ["VPN"],
+			"description": "Wireguard VPN Server",
+			"env": [
+				{
+					"default": 1000,
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": 100,
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"default": 1,
+					"label": "PEERS",
+					"name": "PEERS"
+				},
+				{
+					"label": "SERVERURL",
+					"name": "SERVERURL"
+				},
+				{
+					"default": "51820",
+					"label": "SERVERPORT",
+					"name": "SERVERPORT"
+				}
+			],
+			"image": "lscr.io/linuxserver/wireguard",
+			"logo": "https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg",
+			"name": "WireGuard",
+			"platform": "linux",
+			"ports": [
+				"51820:51820/udp"
+			],
+			"privileged": true,
+			"restart_policy": "unless-stopped",
+			"title": "WireGuard",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Wireguard/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/Wireguard/lib/modules",
+					"container": "/lib/modules"
+				}
+			]
+		},
+		{
+			"categories": ["Development", "Project Management"],
+			"description": "Open-Source end-to-end software development platform",
+			"image": "gitlab/gitlab-ce:latest",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
+			"name": "Gitlab",
+			"note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
+			"platform": "linux",
+			"ports": [
+				"80/tcp",
+				"443/tcp",
+				"22/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "GitLab CE",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Gitlab/etc/",
+					"container": "/etc/gitlab"
+				},
+				{
+					"bind": "/portainer/Gitlab/log",
+					"container": "/var/log/gitlab"
+				},
+				{
+					"bind": "/portainer/Gitlab/opt",
+					"container": "/var/opt/gitlab"
+				}
+			]
+		},
+		{
+			"categories": ["Multimedia"],
+			"description": "Multimedia streaming server (Movies, TV, Music)",
+			"env": [
+				{
+					"default": 1000,
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": 1000,
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "docker",
+					"label": "VERSION",
+					"name": "VERSION",
+					"preset": true
+				},
+				{
+					"label": "PLEX_CLAIM",
+					"name": "PLEX_CLAIM"
+				}
+			],
+			"image": "lscr.io/linuxserver/plex",
+			"logo": "https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png",
+			"name": "Plex",
+			"network": "host",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "Plex",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Plex/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/Plex/tv",
+					"container": "/tv"
+				},
+				{
+					"bind": "/portainer/Plex/movies",
+					"container": "/movies"
+				}
+			] 
+		},
+		{
+			"categories": ["TV", "PVR"],
+			"description": "PVR for usenet and bittorent",
+			"env": [
+				{
+					"default": 1000,
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": 1000,
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "ghcr.io/linuxserver/sonarr",
+			"logo": "https://opencollective-production.s3.us-west-1.amazonaws.com/619dbc90-034b-11eb-8bb2-f319c4b14ebf.png",
+			"name": "Sonarr",
+			"platform": "linux",
+			"ports": [
+				"8989:8989/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Sonarr",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Sonarr/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/Sonarr/tv",
+					"container": "/tv"
+				},
+				{
+					"bind": "/portainer/Sonarr/downloads",
+					"container": "/downloads"
+				}
+			]
+		},
+        {
+            "categories": ["Snippet"],
+            "description": "Pastebin for code snippets",
+            "env": [
+                {
+					"default": "spirit",
+                    "label": "INSTANCE",
+                    "name": "INSTANCE"
+                }
+            ],
+            "logo": "https://i.ibb.co/0rt02vW/github-banner-1.png",
+            "name": "spacebin",
+            "platform": "linux",
+			"repository": {
+				"url": "http://git.adnauseam.xyz/synysterzv/template.git",
+				"stackfile": "stack/spacebin.yml"
+			},
+            "title": "Spacebin",
+            "type": 3
+        }
+	]
+}

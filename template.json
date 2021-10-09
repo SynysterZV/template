@@ -1,0 +1,62 @@
+{
+    "version": 2,
+    "templates": [
+	{
+	    "categories": ["VPN"],
+	    "description": "Wireguard VPN Server",
+	    "env": [
+		{
+		    "default": 1000,
+		    "label": "PUID",
+		    "name": "PUID"
+		},
+		{
+		    "default": 100,
+		    "label": "PGID",
+		    "name": "PGID"
+		},
+		{
+		    "default": "America/New_York",
+		    "label": "TZ",
+		    "name": "TZ"
+		},
+		{
+		    "default": 1,
+		    "label": "PEERS",
+		    "name": "PEERS"
+		},
+		{
+		    "label": "SERVERURL",
+		    "name": "SERVERURL"
+		},
+		{
+		    "default": "51820",
+		    "label": "SERVERPORT",
+		    "name": "SERVERPORT",
+		    "preset": true
+		}
+	    ],
+	    "image": "lscr.io/linuxserver/wireguard",
+	    "logo": "https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg",
+	    "name": "WireGuard",
+	    "platform": "linux",
+	    "ports": [
+		"51820:51820/udp"
+	    ],
+	    "privileged": true,
+	    "restart_policy": "unless-stopped",
+	    "title": "WireGuard",
+	    "type": 1,
+	    "volumes": [
+		{
+		    "bind": "/portainer/Files/AppData/Wireguard",
+		    "container": "/config"
+		},
+		{
+		    "bind": "/portainer/Wireguard/lib/modules",
+		    "container": "/lib/modules"
+		}
+	    ]
+	}
+    ]
+}

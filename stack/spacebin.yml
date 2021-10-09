@@ -7,7 +7,7 @@ services:
   pulsar:
     container_name: pulsar
     environment:
-      PULSAR_INSTANCE: ${INSTANCE}
+      PULSAR_INSTANCE: spirit
     image: 'spacebinorg/pulsar:v1.1.3'
     ports:
       - 3333:3000

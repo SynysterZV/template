@@ -184,10 +184,12 @@
         {
             "categories": ["Snippet"],
             "description": "Pastebin for code snippets",
-			"env": {
-				"label": "INSTANCE",
-				"name": "INSTANCE"
-			},
+			"env": [
+				{
+					"label": "INSTANCE",
+					"name": "INSTANCE"
+				}
+			],
             "logo": "https://i.ibb.co/0rt02vW/github-banner-1.png",
             "name": "spacebin",
             "platform": "linux",

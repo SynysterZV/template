@@ -9,7 +9,7 @@ services:
   pulsar:
     container_name: pulsar
     environment:
-      - PULSAR_INSTANCE=https://paste.adnauseam.xyz
+      - PULSAR_INSTANCE=${INSTANCE}
     image: 'spacebinorg/pulsar:v1.1.3'
     ports:
       - 9002:3000

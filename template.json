@@ -195,7 +195,7 @@
             "name": "spacebin",
             "platform": "linux",
 			"repository": {
-				"url": "http://git.adnauseam.xyz/synysterzv/template.git",
+				"url": "https://github.com/synysterzv/template",
 				"stackfile": "stack/spacebin.yml"
 			},
             "title": "Spacebin",

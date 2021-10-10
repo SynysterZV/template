@@ -310,12 +310,12 @@
 			"description": "All-In-One multimedia suite",
 			"env": [
 				{
-					"default": 1000,
+					"default": "1000",
 					"label": "PUID",
 					"name": "PUID"
 				},
 				{
-					"default": 1000,
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},

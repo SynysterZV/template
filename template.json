@@ -60,6 +60,12 @@
 		{
 			"categories": ["Development", "Project Management"],
 			"description": "Open-Source end-to-end software development platform",
+			"env": [
+				{
+					"label": "GITLAB_OMNIBUS_CONFIG",
+					"name": "GITLAB_OMNIBUS_CONFIG"
+				}
+			],
 			"image": "gitlab/gitlab-ce:latest",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
 			"name": "Gitlab",

@@ -226,7 +226,7 @@
 			"name": "minecraft",
 			"platform": "linux",
 			"ports": [
-				"25565:25565"
+				"25565:25565/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Minecraft Docker",

@@ -201,7 +201,7 @@
             "platform": "linux",
 			"repository": {
 				"url": "https://github.com/synysterzv/template",
-				"stackfile": "stack/spacebin.yml"
+				"stackfile": "stack/spacebin/docker-compose.yml"
 			},
             "title": "Spacebin",
             "type": 3
@@ -304,6 +304,41 @@
 					"container": "/media2"
 				}
 			]
+		},
+		{
+			"categories": ["AIO", "Multimedia"],
+			"description": "All-In-One multimedia suite",
+			"env": [
+				{
+					"default": 1000,
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": 1000,
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"default": "/media",
+					"label": "ROOT",
+					"name": "ROOT"
+				}
+			],
+			"logo": "https://images.squarespace-cdn.com/content/59caa5bb8fd4d2625802a934/1506548410675-Q6VGKV8DU70UCNXFBNA1/assassin-symbol-white.png?content-type=image%2Fpng",
+			"name": "HTPC",
+			"platform": "linux",
+			"repository": {
+				"url": "https://github.com/synysterzv/template",
+				"stackfile": "stack/htpc/docker-compose.yml"
+			},
+            "title": "HTPC",
+            "type": 3
 		}
 	]
 }

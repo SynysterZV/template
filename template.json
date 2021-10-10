@@ -257,7 +257,7 @@
 					"container": "/data"
 				},
 				{
-					"bind": "portainer/gogs/backup",
+					"bind": "/portainer/gogs/backup",
 					"container": "/backup"
 				}
 			]

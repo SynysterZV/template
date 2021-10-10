@@ -199,6 +199,44 @@
 			},
             "title": "Spacebin",
             "type": 3
-        }
+        },
+		{
+			"categories": ["Games"],
+			"description": "Minecraft Server",
+			"env": [
+				{
+					"default": "TRUE",
+					"label": "EULA",
+					"name": "EULA",
+					"preset": true
+				},
+				{
+					"default": "SPIGOT",
+					"label": "TYPE",
+					"name": "TYPE"
+				},
+				{
+					"description": "Optional",
+					"label": "SPIGET_RESOURCES",
+					"name": "SPIGET_RESOURCES"
+				}
+			],
+			"image": "itzg/minecraft-server",
+			"logo": "https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png",
+			"name": "minecraft",
+			"platform": "linux",
+			"ports": [
+				"25565:25565"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Minecraft Docker",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/minecraft/data",
+					"container": "/data"
+				}
+			]
+		}
 	]
 }

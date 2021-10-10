@@ -16,9 +16,9 @@ services:
     ports:
       - 8112:8112 # port for deluge web UI to be reachable from local network
   
-  deluge:
-    container_name: qbittorent
-    image: lscr.io/linuxserver/qbittorent:latest
+  qbittorrent:
+    container_name: qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
     restart: unless-stopped
     network_mode: service:vpn # run on the vpn network
     environment:
@@ -28,7 +28,7 @@ services:
       - WEBUI_PORT=8080
     volumes:
       - ${ROOT}/downloads:/downloads # downloads folder
-      - ${ROOT}/config/deluge:/config # config files
+      - ${ROOT}/config/qbittorent:/config # config files
 
   jackett:
     container_name: jackett

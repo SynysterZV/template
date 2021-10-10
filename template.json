@@ -237,6 +237,26 @@
 					"container": "/data"
 				}
 			]
+		},
+		{
+			"categories": ["Development"],
+			"description": "Open-Source Git server",
+			"image": "gogs/gogs",
+			"logo": "https://upload.wikimedia.org/wikipedia/commons/0/09/Gogs_logo.png",
+			"name": "gogs",
+			"platform": "linux",
+			"ports": [
+				"10880:3000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Gogs",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/gogs/data",
+					"container": "/data"
+				}
+			]
 		}
 	]
 }

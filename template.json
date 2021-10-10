@@ -255,6 +255,10 @@
 				{
 					"bind": "/portainer/gogs/data",
 					"container": "/data"
+				},
+				{
+					"bind": "portainer/gogs/backup",
+					"container": "/backup"
 				}
 			]
 		}

@@ -330,9 +330,12 @@
 					"name": "ROOT"
 				},
 				{
-					"default": "192.168.0.1/24",
-					"label": "NETWORK",
-					"name": "NETWORK"
+					"label": "VPN Username",
+					"name": "VPNUSERNAME"
+				},
+				{
+					"label": "VPN Password",
+					"name": "VPNPASSWORD"
 				}
 			],
 			"logo": "https://images.squarespace-cdn.com/content/59caa5bb8fd4d2625802a934/1506548410675-Q6VGKV8DU70UCNXFBNA1/assassin-symbol-white.png?content-type=image%2Fpng",

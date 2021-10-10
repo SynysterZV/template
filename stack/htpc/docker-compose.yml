@@ -25,7 +25,7 @@ services:
       - PUID=${PUID} # default user id, defined in .env
       - PGID=${PGID} # default group id, defined in .env
       - TZ=${TZ} # timezone, defined in .env
-      - WEBUI_PORT=8080
+      - WEBUI_PORT=8112
     volumes:
       - ${ROOT}/downloads:/downloads # downloads folder
       - ${ROOT}/config/qbittorent:/config # config files

@@ -6,7 +6,7 @@ services:
       - PROTONVPN_USERNAME=${VPNUSERNAME}
       - PROTONVPN_PASSWORD=${VPNPASSWORD}
       - PROTONVPN_TIER=0
-      - PROTONVPN_COUNTRY=US
+      - PROTONVPN_SERVER=US
     image: ghcr.io/tprasadtp/protonvpn:latest
     cap_add:
       - net_admin # required to modify network interfaces

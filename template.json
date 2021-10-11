@@ -430,7 +430,7 @@
 			"name": "netdata",
 			"platform": "linux",
 			"ports": [
-				"19999:19999"
+				"19999:19999/tcp"
 			],
 			"privileged": true,
 			"restart_policy": "unless-stopped",

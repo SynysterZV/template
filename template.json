@@ -384,6 +384,19 @@
 					"container": "/config"
 				}
 			]
+		},
+		{
+			"categories": ["Snippets"],
+			"description": "Pastebin for code snippets",
+			"logo": "https://latesthackingnews.com/wp-content/uploads/2020/09/pastebin.png",
+			"name": "Hastebin",
+			"platform": "linux",
+			"repository": {
+				"url": "https://github.com/synysterzv/template",
+				"stackfile": "stack/hastebin/docker-compose.yml"
+			},
+            "title": "Hastebin",
+            "type": 3
 		}
 	]
 }

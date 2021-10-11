@@ -1,0 +1,15 @@
+version: "3"
+services:
+  hastebin:
+    container_name: hastebin
+    image: rlister/hastebin
+    environment:
+      STORAGE_TYPE: redis
+      STORAGE_HOST: redis
+    ports:
+      - 7777:7777
+  redis:
+    image: redis
+    volumes:
+      - /media/syn/docker/hastebin/redis:/data
+entrypoint: redis-server --appendonly yes

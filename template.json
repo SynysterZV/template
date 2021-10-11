@@ -457,6 +457,26 @@
 					"container": "/var/run/docker.sock"
 				}
 			]
+		},
+		{
+			"categories": ["Editting"],
+			"description": "KDEnLive video editor",
+			"image": "tessypowder/docker-kdenlive",
+			"logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Breezeicons-apps-48-kdenlive.svg/1200px-Breezeicons-apps-48-kdenlive.svg.png",
+			"name": "kdenlive",
+			"platform": "linux",
+			"ports": [
+				"5800:5800/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "KDEnlive",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/media/syn/docker/kdenlive",
+					"container": "/shared"
+				}
+			]
 		}
 	]
 }

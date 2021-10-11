@@ -397,6 +397,66 @@
 			},
             "title": "Hastebin",
             "type": 3
+		},
+		{
+			"categories": ["Monitoring"],
+			"description": "System Resource Monitoring",
+			"env": [
+				{
+					"default": 1000,
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": 1000,
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "Virtual Host",
+					"name": "VIRTUAL_HOST"
+				},
+				{
+					"label": "LetsEncrypt Host",
+					"name": "LETSENCRYPT_HOST"
+				},
+				{
+					"label": "LetsEncrypt Email",
+					"name": "LETSENCRYPT_EMAIL"
+				}
+			],
+			"image": "titpetric/netdata",
+			"logo": "https://styles.redditmedia.com/t5_3j3ok/styles/communityIcon_somkjc7pipv61.png",
+			"name": "netdata",
+			"platform": "linux",
+			"ports": [
+				"19999:19999"
+			],
+			"privileged": true,
+			"restart_policy": "unless-stopped",
+			"title": "Netdata",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/proc",
+					"container": "/host/proc",
+					"readonly": true
+				},
+				{
+					"bind": "/sys",
+					"container": "/host/sys",
+					"readonly": true
+				},
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime",
+					"readonly": true
+				},
+				{
+					"bind": "/var/run/docker.sock",
+					"container": "/var/run/docker.sock"
+				}
+			]
 		}
 	]
 }

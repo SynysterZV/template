@@ -473,8 +473,48 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/media/syn/docker/kdenlive",
+					"bind": "/portainer/kdenlive",
 					"container": "/shared"
+				}
+			]
+		},
+		{
+			"categories": ["Ad Blocking", "DNS"],
+			"description": "DNS blackhole",
+			"env": [
+				{
+					"default": "America/New_York",
+					"label": "Timezone",
+					"name": "TZ"
+				},
+				{
+					"default": "admin",
+					"label": "Admin Password",
+					"name": "WEBPASSWORD"
+				}
+			],
+			"image": "pihole/pihole",
+			"logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Pi-hole_vector_logo.svg/1200px-Pi-hole_vector_logo.svg.png",
+			"name": "pihole",
+			"platform": "linux",
+			"ports": [
+				"53:53/tcp",
+				"53:53/udp",
+				"67:67:udp",
+				"8008:80/tcp"
+			],
+			"privileged": true,
+			"restart_policy": "unless-stopped",
+			"title": "PiHole",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/pihole/etc/pihole/",
+					"container": "/etc/pihole/"
+				},
+				{
+					"bind": "/portainer/pihole/etc/dnsmasq.d/",
+					"container": "/etc/dnsmasq.d/"
 				}
 			]
 		}

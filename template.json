@@ -347,6 +347,43 @@
 			},
             "title": "HTPC",
             "type": 3
+		},
+		{
+			"categories": ["Orginzation"],
+			"description": "Service organizer",
+			"env": [
+				{
+					"default": 1000,
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": 1000,
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "lscr.io/linuxserver/organizr",
+			"logo": "https://avatars.githubusercontent.com/u/39032666?s=280&v=4",
+			"name": "Organizr",
+			"platform": "linux",
+			"ports": [
+				"9983:80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Organizr",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Organizr/config",
+					"container": "/config"
+				}
+			]
 		}
 	]
 }

@@ -12,4 +12,3 @@ services:
     image: redis
     volumes:
       - /media/syn/docker/hastebin/redis:/data
-entrypoint: redis-server --appendonly yes

@@ -368,7 +368,7 @@
 					"name": "TZ"
 				}
 			],
-			"image": "linuxserver/organizr",
+			"image": "organizr/organizr",
 			"logo": "https://avatars.githubusercontent.com/u/39032666?s=280&v=4",
 			"name": "Organizr",
 			"platform": "linux",

@@ -500,7 +500,7 @@
 			"ports": [
 				"53:53/tcp",
 				"53:53/udp",
-				"67:67:udp",
+				"67:67/udp",
 				"8008:80/tcp"
 			],
 			"privileged": true,

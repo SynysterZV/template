@@ -536,6 +536,7 @@
 			"ports": [
 				"5665:5665/tcp"
 			],
+			"privileged": true,
 			"restart_policy": "unless-stopped",
 			"title": "Icinga",
 			"type": 1,

@@ -517,6 +517,34 @@
 					"container": "/etc/dnsmasq.d/"
 				}
 			]
+		},
+		{
+			"categories": ["Monitoring", "Network"],
+			"description": "Network resource monitor",
+			"env": [
+				{
+					"default": 1,
+					"label": "ICINGA_MASTER",
+					"name": "ICINGA_MASTER",
+					"preset": true
+				}
+			],
+			"image": "icinga/icinga2",
+			"logo": "https://www.influxdata.com/wp-content/uploads/icinga-logo.png",
+			"name": "icinga",
+			"platform": "linux",
+			"ports": [
+				"5665:5665/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Icinga",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/icinga/",
+					"container": "/data"
+				}
+			]
 		}
 	]
 }

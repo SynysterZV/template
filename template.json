@@ -217,13 +217,18 @@
 					"preset": true
 				},
 				{
+					"default": "1G",
+					"label": "Memory",
+					"name": "MEMORY"
+				},
+				{
 					"default": "SPIGOT",
-					"label": "TYPE",
+					"label": "Type",
 					"name": "TYPE"
 				},
 				{
 					"description": "Optional",
-					"label": "SPIGET_RESOURCES",
+					"label": "Spigot Resources",
 					"name": "SPIGET_RESOURCES"
 				}
 			],
